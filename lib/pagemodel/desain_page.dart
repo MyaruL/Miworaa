@@ -4,7 +4,7 @@ import '../detail/detail_desain_page.dart';
 class DesainPage extends StatelessWidget {
   const DesainPage({super.key});
 
-  final List<Map<String, dynamic>> seniList = const [
+  final List<Map<String, dynamic>> desainList = const [
     {
       "nama": "Festival Ticket Mockup",
       "deskripsi": "Desain tiket konser/festival.",
@@ -47,7 +47,7 @@ class DesainPage extends StatelessWidget {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: _buildList(context, seniList),
+      body: _buildList(context, desainList),
     );
   }
 }

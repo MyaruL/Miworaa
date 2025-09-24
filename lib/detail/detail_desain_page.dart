@@ -1,31 +1,28 @@
+import 'package:belajarff/detail/detail_page.dart';
 import 'package:flutter/material.dart';
 
-class DetailDesainPage extends StatefulWidget {
-  final String nama;
-  final String deskripsi;
-  final String gambar;
-  final double rating;
-
+class DetailDesainPage extends DetailPageBase {
   const DetailDesainPage({
     super.key,
-    required this.nama,
-    required this.deskripsi,
-    required this.gambar,
-    required this.rating,
+    required super.nama,
+    required super.deskripsi,
+    required super.gambar,
+    required super.rating,
   });
+
+  @override
+  String getKategori() => "Seni";
 
   @override
   State<DetailDesainPage> createState() => _DetailDesainPageState();
 }
 
 class _DetailDesainPageState extends State<DetailDesainPage> {
-  // Private fields
   late String _nama;
   late String _deskripsi;
   late String _gambar;
   late double _rating;
 
-  // Getter & Setter
   String get nama => _nama;
   set nama(String value) => setState(() => _nama = value);
 

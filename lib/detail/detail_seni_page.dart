@@ -1,18 +1,17 @@
+import 'package:belajarff/detail/detail_page.dart';
 import 'package:flutter/material.dart';
 
-class DetailSeniPage extends StatefulWidget {
-  final String nama;
-  final String deskripsi;
-  final String gambar;
-  final double rating;
-
+class DetailSeniPage extends DetailPageBase {
   const DetailSeniPage({
     super.key,
-    required this.nama,
-    required this.deskripsi,
-    required this.gambar,
-    required this.rating,
+    required super.nama,
+    required super.deskripsi,
+    required super.gambar,
+    required super.rating,
   });
+
+  @override
+  String getKategori() => "Seni";
 
   @override
   State<DetailSeniPage> createState() => _DetailSeniPageState();

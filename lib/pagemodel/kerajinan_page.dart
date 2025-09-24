@@ -5,7 +5,7 @@ import '../detail/detail_kerajinan_page.dart';
 class KerajinanPage extends StatelessWidget {
   const KerajinanPage({super.key});
 
-  final List<Map<String, dynamic>> seniList = const [
+  final List<Map<String, dynamic>> kerajinanList = const [
     {
       "nama": "Mini Clay Sushi",
       "deskripsi": "Clay charm bentuk makanan mini lucu.",
@@ -42,7 +42,7 @@ class KerajinanPage extends StatelessWidget {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: _buildList(context, seniList),
+      body: _buildList(context, kerajinanList),
     );
   }
 }

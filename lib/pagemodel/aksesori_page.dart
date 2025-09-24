@@ -4,7 +4,7 @@ import '../detail/detail_aksesori_page.dart'; // 🔹 tambahin ini
 class AksesoriPage extends StatelessWidget {
   const AksesoriPage({super.key});
 
-  final List<Map<String, dynamic>> seniList = const [
+  final List<Map<String, dynamic>> aksesoriList = const [
     {
       "nama": "Butterfly Ring ",
       "deskripsi": "Cincin kupu-kupu hologram aesthetic.",
@@ -41,7 +41,7 @@ class AksesoriPage extends StatelessWidget {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: _buildList(context, seniList), // 🔹 kirim context
+      body: _buildList(context, aksesoriList), // 🔹 kirim context
     );
   }
 }
