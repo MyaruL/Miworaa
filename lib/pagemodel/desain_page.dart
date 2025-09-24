@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
+import '../detail/detail_desain_page.dart';
 
 class DesainPage extends StatelessWidget {
   const DesainPage({super.key});
 
   final List<Map<String, dynamic>> seniList = const [
     {
-      "nama": "Lukisan Sunset",
-      "deskripsi": "Lukisan pemandangan matahari terbenam dengan cat minyak.",
-      "gambar": "assets/images/seni1.png",
+      "nama": "Festival Ticket Mockup",
+      "deskripsi": "Desain tiket konser/festival.",
+      "gambar": "assets/images/d1.jpeg",
       "rating": 4.9,
     },
     {
-      "nama": "Sketsa Wajah",
-      "deskripsi": "Sketsa wajah realis dengan pensil hitam putih.",
-      "gambar": "assets/images/seni2.png",
+      "nama": "Meme Sticker Pack",
+      "deskripsi": "Sticker WA receh + trending memes.",
+      "gambar": "assets/images/d2.jpeg",
       "rating": 4.7,
     },
     {
-      "nama": "Ilustrasi Digital",
-      "deskripsi": "Ilustrasi full color untuk poster & merchandise.",
-      "gambar": "assets/images/seni3.png",
+      "nama": "Skincare Box Design",
+      "deskripsi": "Packaging minimalis ala brand skincare Korea.",
+      "gambar": "assets/images/d3.jpeg",
+      "rating": 4.8,
+    },
+    {
+      "nama": "Typography",
+      "deskripsi": "Tulisan unik berbentuk.",
+      "gambar": "assets/images/d4.jpeg",
       "rating": 4.8,
     },
   ];
@@ -40,23 +47,23 @@ class DesainPage extends StatelessWidget {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: _buildList(seniList),
+      body: _buildList(context, seniList),
     );
   }
 }
 
-Widget _buildList(List<Map<String, dynamic>> data) {
+Widget _buildList(BuildContext context, List<Map<String, dynamic>> data) {
   return ListView.builder(
     padding: const EdgeInsets.all(16),
     itemCount: data.length,
     itemBuilder: (context, index) {
       final item = data[index];
-      return _buildCard(item);
+      return _buildCard(context, item);
     },
   );
 }
 
-Widget _buildCard(Map<String, dynamic> item) {
+Widget _buildCard(BuildContext context, Map<String, dynamic> item) {
   return Container(
     margin: const EdgeInsets.only(bottom: 16),
     decoration: BoxDecoration(
@@ -156,7 +163,19 @@ Widget _buildCard(Map<String, dynamic> item) {
                         borderRadius: BorderRadius.circular(6),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => DetailDesainPage(
+                            nama: item["nama"],
+                            deskripsi: item["deskripsi"],
+                            gambar: item["gambar"],
+                            rating: item["rating"],
+                          ),
+                        ),
+                      );
+                    },
                     child: const Text("Lihat", style: TextStyle(fontSize: 10)),
                   ),
                 ),

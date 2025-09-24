@@ -8,20 +8,32 @@ class SeniPage extends StatelessWidget {
     {
       "nama": "Lukisan Sunset",
       "deskripsi": "Lukisan pemandangan matahari terbenam dengan cat minyak.",
-      "gambar": "assets/images/seni1.png",
+      "gambar": "assets/images/s1.jpeg",
       "rating": 4.9,
     },
     {
       "nama": "Sketsa Wajah",
       "deskripsi": "Sketsa wajah realis dengan pensil hitam putih.",
-      "gambar": "assets/images/seni2.png",
+      "gambar": "assets/images/s2.jpg",
       "rating": 4.7,
     },
     {
       "nama": "Ilustrasi Digital",
       "deskripsi": "Ilustrasi full color untuk poster & merchandise.",
-      "gambar": "assets/images/seni3.png",
+      "gambar": "assets/images/s3.jpeg",
       "rating": 4.8,
+    },
+    {
+      "nama": "Anime Sketch",
+      "deskripsi": "Lukisan karakter anime menggunakan pensil.",
+      "gambar": "assets/images/s4.jpg",
+      "rating": 4.9,
+    },
+    {
+      "nama": "Galaxy Painting",
+      "deskripsi": "Lukisan langit bintang & galaksi vibes Tumblr.",
+      "gambar": "assets/images/s5.jpeg",
+      "rating": 4.7,
     },
   ];
 
@@ -81,7 +93,7 @@ Widget _buildCard(BuildContext context, Map<String, dynamic> item) {
           child: Image.asset(
             item["gambar"],
             width: 90,
-            height: 90,
+            height: 105,
             fit: BoxFit.cover,
           ),
         ),

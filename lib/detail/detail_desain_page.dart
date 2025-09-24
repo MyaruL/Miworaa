@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class DetailSeniPage extends StatefulWidget {
+class DetailDesainPage extends StatefulWidget {
   final String nama;
   final String deskripsi;
   final String gambar;
   final double rating;
 
-  const DetailSeniPage({
+  const DetailDesainPage({
     super.key,
     required this.nama,
     required this.deskripsi,
@@ -15,10 +15,10 @@ class DetailSeniPage extends StatefulWidget {
   });
 
   @override
-  State<DetailSeniPage> createState() => _DetailSeniPageState();
+  State<DetailDesainPage> createState() => _DetailDesainPageState();
 }
 
-class _DetailSeniPageState extends State<DetailSeniPage> {
+class _DetailDesainPageState extends State<DetailDesainPage> {
   // Private fields
   late String _nama;
   late String _deskripsi;
@@ -160,8 +160,8 @@ class _DetailSeniPageState extends State<DetailSeniPage> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    "Aplikasi ini dirancang sebagai referensi untuk menghasilkan karya seni.\n"
-                    "\nSetiap karya seni ini bisa jadi referensi untuk mengasah kreativitasmu. Tapi kalau kamu ingin langsung menikmati karyanya tanpa harus membuat sendiri, kamu bisa mendapatkannya lewat fitur Chat Sekarang.",
+                    "Aplikasi ini dirancang sebagai referensi untuk menghasilkan karya desain.\n"
+                    "\nSetiap desain ini bisa jadi referensi untuk mengasah kreativitasmu. Tapi kalau kamu ingin langsung menikmati karyanya tanpa harus membuat sendiri, kamu bisa mendapatkannya lewat fitur Chat Sekarang.",
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontSize: 14,

@@ -1,7 +1,7 @@
 class Kategori {
   String nama;
   String deskripsi;
-  String kategori; // <<-- tambahin ini
+  String kategori;
 
   Kategori({
     required this.nama,

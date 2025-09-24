@@ -53,6 +53,11 @@ class _LoginPageState extends State<LoginPage> {
                 // Container putih buat isi form
                 Container(
                   width: double.infinity,
+                  constraints: BoxConstraints(
+                    minHeight:
+                        MediaQuery.of(context).size.height *
+                        0.75, // ✅ fleksibel
+                  ),
                   padding: const EdgeInsets.all(24),
                   decoration: const BoxDecoration(
                     color: Colors.white,

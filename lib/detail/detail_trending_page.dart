@@ -1,42 +1,27 @@
 import 'package:flutter/material.dart';
 
-class DetailSeniPage extends StatefulWidget {
+class DetailTrendingPage extends StatefulWidget {
   final String nama;
   final String deskripsi;
   final String gambar;
-  final double rating;
+  final String kategori;
 
-  const DetailSeniPage({
+  const DetailTrendingPage({
     super.key,
     required this.nama,
     required this.deskripsi,
     required this.gambar,
-    required this.rating,
+    required this.kategori,
   });
 
   @override
-  State<DetailSeniPage> createState() => _DetailSeniPageState();
+  State<DetailTrendingPage> createState() => _DetailTrendingPageState();
 }
 
-class _DetailSeniPageState extends State<DetailSeniPage> {
-  // Private fields
+class _DetailTrendingPageState extends State<DetailTrendingPage> {
   late String _nama;
   late String _deskripsi;
   late String _gambar;
-  late double _rating;
-
-  // Getter & Setter
-  String get nama => _nama;
-  set nama(String value) => setState(() => _nama = value);
-
-  String get deskripsi => _deskripsi;
-  set deskripsi(String value) => setState(() => _deskripsi = value);
-
-  String get gambar => _gambar;
-  set gambar(String value) => setState(() => _gambar = value);
-
-  double get rating => _rating;
-  set rating(double value) => setState(() => _rating = value);
 
   @override
   void initState() {
@@ -44,7 +29,6 @@ class _DetailSeniPageState extends State<DetailSeniPage> {
     _nama = widget.nama;
     _deskripsi = widget.deskripsi;
     _gambar = widget.gambar;
-    _rating = widget.rating;
   }
 
   @override
@@ -111,22 +95,6 @@ class _DetailSeniPageState extends State<DetailSeniPage> {
                       fontFamily: "Poppins",
                     ),
                   ),
-                  const SizedBox(height: 8),
-
-                  // Rating
-                  Row(
-                    children: [
-                      const Icon(Icons.star, color: Colors.amber, size: 20),
-                      const SizedBox(width: 4),
-                      Text(
-                        _rating.toString(),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                        ),
-                      ),
-                    ],
-                  ),
                   const SizedBox(height: 20),
 
                   // Product Detail
@@ -160,8 +128,8 @@ class _DetailSeniPageState extends State<DetailSeniPage> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    "Aplikasi ini dirancang sebagai referensi untuk menghasilkan karya seni.\n"
-                    "\nSetiap karya seni ini bisa jadi referensi untuk mengasah kreativitasmu. Tapi kalau kamu ingin langsung menikmati karyanya tanpa harus membuat sendiri, kamu bisa mendapatkannya lewat fitur Chat Sekarang.",
+                    "Lagi jadi favorit banyak orang dan masuk dalam daftar Top Trending!\n"
+                    "\nCocok banget buat kamu yang ingin ikutan tren terbaru dan nggak mau ketinggalan hype. Ingin tahu lebih banyak detail atau langsung order? Yuk, hubungi penjual lewat fitur Chat Sekarang dan temukan inspirasi terbaikmu di sini.",
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontSize: 14,

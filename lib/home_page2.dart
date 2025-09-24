@@ -1,3 +1,4 @@
+import 'package:belajarff/detail/detail_trending_page.dart';
 import 'package:belajarff/detail_page2.dart';
 import 'package:belajarff/model/trending_item.dart';
 import 'package:belajarff/pagemodel/aksesori_page.dart';
@@ -175,15 +176,11 @@ class HomePage2 extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailPage2(
-                              title: trending.nama,
-                              description: trending.deskripsi,
-                              features: [
-                                "Lihat detail produk",
-                                "Bisa order custom",
-                                "Chat kreator langsung",
-                              ],
-                              color: Colors.teal,
+                            builder: (context) => DetailTrendingPage(
+                              nama: trending.nama,
+                              deskripsi: trending.deskripsi,
+                              gambar: trending.gambar,
+                              kategori: trending.kategori,
                             ),
                           ),
                         );
@@ -213,9 +210,18 @@ class HomePage2 extends StatelessWidget {
                                 fit: BoxFit.cover,
                               ),
 
-                              // Overlay biru semi transparan
+                              // Overlay gradient biar teks kebaca
                               Container(
-                                color: const Color(0xFF2C3E91).withOpacity(0.7),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Colors.black.withOpacity(0.6),
+                                      Colors.transparent,
+                                    ],
+                                    begin: Alignment.bottomCenter,
+                                    end: Alignment.topCenter,
+                                  ),
+                                ),
                               ),
 
                               // Teks judul & deskripsi

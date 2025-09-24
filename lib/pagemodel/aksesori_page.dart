@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+import '../detail/detail_aksesori_page.dart'; // 🔹 tambahin ini
 
 class AksesoriPage extends StatelessWidget {
   const AksesoriPage({super.key});
 
   final List<Map<String, dynamic>> seniList = const [
     {
-      "nama": "Lukisan Sunset",
-      "deskripsi": "Lukisan pemandangan matahari terbenam dengan cat minyak.",
-      "gambar": "assets/images/seni1.png",
+      "nama": "Butterfly Ring ",
+      "deskripsi": "Cincin kupu-kupu hologram aesthetic.",
+      "gambar": "assets/images/a1.jpeg",
       "rating": 4.9,
     },
     {
-      "nama": "Sketsa Wajah",
-      "deskripsi": "Sketsa wajah realis dengan pensil hitam putih.",
-      "gambar": "assets/images/seni2.png",
+      "nama": "Star Hoop Earring",
+      "deskripsi": "Anting hoop bentuk bintang, super gemes.",
+      "gambar": "assets/images/a2.jpeg",
       "rating": 4.7,
     },
     {
-      "nama": "Ilustrasi Digital",
-      "deskripsi": "Ilustrasi full color untuk poster & merchandise.",
-      "gambar": "assets/images/seni3.png",
-      "rating": 4.8,
+      "nama": "Retro Claw Clip",
+      "deskripsi": "Jepit rambut retro ala 90s comeback",
+      "gambar": "assets/images/a3.jpeg",
+      "rating": 4.9,
     },
   ];
 
@@ -40,23 +41,23 @@ class AksesoriPage extends StatelessWidget {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: _buildList(seniList),
+      body: _buildList(context, seniList), // 🔹 kirim context
     );
   }
 }
 
-Widget _buildList(List<Map<String, dynamic>> data) {
+Widget _buildList(BuildContext context, List<Map<String, dynamic>> data) {
   return ListView.builder(
     padding: const EdgeInsets.all(16),
     itemCount: data.length,
     itemBuilder: (context, index) {
       final item = data[index];
-      return _buildCard(item);
+      return _buildCard(context, item); // 🔹 kirim context
     },
   );
 }
 
-Widget _buildCard(Map<String, dynamic> item) {
+Widget _buildCard(BuildContext context, Map<String, dynamic> item) {
   return Container(
     margin: const EdgeInsets.only(bottom: 12),
     decoration: BoxDecoration(
@@ -73,27 +74,22 @@ Widget _buildCard(Map<String, dynamic> item) {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // 🔹 Gambar kecil kotak
         ClipRRect(
           borderRadius: BorderRadius.circular(8),
           child: Image.asset(
             item["gambar"],
-            width: 60, // kecil
-            height: 60, // kecil
+            width: 90,
+            height: 105,
             fit: BoxFit.cover,
           ),
         ),
-
         const SizedBox(width: 8),
-
-        // 🔹 Isi konten
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Judul + rating
                 Row(
                   children: [
                     Expanded(
@@ -134,10 +130,7 @@ Widget _buildCard(Map<String, dynamic> item) {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 4),
-
-                // Deskripsi
                 Text(
                   item["deskripsi"],
                   style: const TextStyle(
@@ -148,10 +141,7 @@ Widget _buildCard(Map<String, dynamic> item) {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-
                 const SizedBox(height: 4),
-
-                // Tombol lihat kecil
                 Align(
                   alignment: Alignment.bottomRight,
                   child: SizedBox(
@@ -165,7 +155,19 @@ Widget _buildCard(Map<String, dynamic> item) {
                           borderRadius: BorderRadius.circular(6),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => DetailAksesoriPage(
+                              nama: item["nama"],
+                              deskripsi: item["deskripsi"],
+                              gambar: item["gambar"],
+                              rating: item["rating"],
+                            ),
+                          ),
+                        );
+                      },
                       child: const Text(
                         "Lihat",
                         style: TextStyle(fontSize: 10),
