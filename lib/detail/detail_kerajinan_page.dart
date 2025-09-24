@@ -11,7 +11,7 @@ class DetailKerajinanPage extends DetailPageBase {
   });
 
   @override
-  String getKategori() => "Seni";
+  String getKategori() => "Kerajinan";
 
   @override
   State<DetailKerajinanPage> createState() => _DetailKerajinanPageState();

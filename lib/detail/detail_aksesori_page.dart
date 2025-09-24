@@ -11,7 +11,7 @@ class DetailAksesoriPage extends DetailPageBase {
   });
 
   @override
-  String getKategori() => "Seni";
+  String getKategori() => "Aksesori";
 
   @override
   State<DetailAksesoriPage> createState() => _DetailAksesoriPageState();

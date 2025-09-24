@@ -11,7 +11,7 @@ class DetailDesainPage extends DetailPageBase {
   });
 
   @override
-  String getKategori() => "Seni";
+  String getKategori() => "Desain";
 
   @override
   State<DetailDesainPage> createState() => _DetailDesainPageState();
