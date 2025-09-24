@@ -1,16 +1,29 @@
-# belajarff
+# 🌸 Miworaa  
 
-A new Flutter project.
+**Miworaa** adalah aplikasi berbasis Flutter yang terinspirasi dari Pinterest, namun dengan fitur tambahan yang memungkinkan pengguna tidak hanya mencari referensi desain, seni, aksesoris, dan kerajinan, tetapi juga langsung membeli karya yang mereka sukai melalui fitur *chat* dengan kreator.  
 
-## Getting Started
+## ✨ Fitur Utama  
+- 📌 **Explore Karya**: Menyediakan berbagai referensi desain, seni, aksesoris, hingga kerajinan.  
+- ⭐ **Detail Produk**: Setiap karya memiliki deskripsi, rating, dan informasi tambahan.  
+- 💬 **Chat dengan Kreator**: Jika pengguna ingin membeli karya, mereka bisa langsung menghubungi kreator.  
+- 🎨 **Kategori Beragam**: Menampilkan karya berdasarkan kategori (Seni, Desain, Aksesoris, Kerajinan, dan Trending).  
 
-This project is a starting point for a Flutter application.
+## 🛠️ Teknologi  
+- **Framework**: Flutter  
+- **Bahasa**: Dart  
+- **Paradigma**: OOP (Encapsulation, Inheritance, Polymorphism)  
 
-A few resources to get you started if this is your first Flutter project:
+## 📂 Struktur Kode  
+- `desain_page.dart` → Menampilkan daftar desain  
+- `detail_seni_page.dart` → Halaman detail seni  
+- `detail_desain_page.dart` → Halaman detail desain  
+- `detail_aksesori_page.dart` → Halaman detail aksesoris  
+- `detail_kerajinan_page.dart` → Halaman detail kerajinan  
+- `detail_trending_page.dart` → Halaman detail trending  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Tujuan  
+Aplikasi ini dikembangkan untuk memenuhi tugas checkpoint PBP sekaligus memberikan pengalaman kepada pengguna dalam mencari inspirasi dan berinteraksi langsung dengan kreator.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔗 Repository  
+GitHub: [Miworaa](https://github.com/MyaruL/Miworaa)  
+
