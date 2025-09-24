@@ -1,5 +1,4 @@
 import 'package:belajarff/detail/detail_trending_page.dart';
-import 'package:belajarff/detail_page2.dart';
 import 'package:belajarff/model/trending_item.dart';
 import 'package:belajarff/pagemodel/aksesori_page.dart';
 import 'package:belajarff/pagemodel/desain_page.dart';
@@ -165,9 +164,9 @@ class HomePage2 extends StatelessWidget {
               const SizedBox(height: 12),
 
               SizedBox(
-                height: 240, // tinggi card trending
+                height: 240,
                 child: ListView.builder(
-                  scrollDirection: Axis.horizontal, // geser samping
+                  scrollDirection: Axis.horizontal,
                   itemCount: trendingList.length,
                   itemBuilder: (context, index) {
                     final trending = trendingList[index];

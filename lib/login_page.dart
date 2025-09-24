@@ -123,7 +123,6 @@ class _LoginPageState extends State<LoginPage> {
                         child: ElevatedButton(
                           onPressed: () {
                             String name = _nameCtrl.text;
-
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
